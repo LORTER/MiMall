@@ -1,38 +1,30 @@
 <!--  -->
 <template>
-  <div class=''>
-      <nav-header></nav-header>
-      <router-view></router-view>
-      <nav-footer></nav-footer>
+  <div class>
+    <order-header></order-header>
+    <router-view></router-view>
+    <nav-footer></nav-footer>
   </div>
 </template>
 
 <script>
+import OrderHeader from "./../components/OrderHeader";
+import NavFooter from "./../components/NavFooter";
 export default {
-  name: '',
+  name: "order",
   components: {
-
+    OrderHeader,
+    NavFooter
   },
-  props:{},
+  props: {},
   data() {
-   return {
-   
-     };
-   },
-  created() {
-     
-    },
-  mounted() {
-     
-    },
-  methods: {
-     
-    },
-  computed: {
-
+    return {};
   },
-  }
+  created() {},
+  mounted() {},
+  methods: {},
+  computed: {}
+};
 </script>
 <style>
-  
 </style>

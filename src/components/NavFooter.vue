@@ -1,36 +1,21 @@
 <!--  -->
 <template>
-  <div class=''>
-
-  </div>
+  <div class>nav-footer</div>
 </template>
 
 <script>
 export default {
-  name: '',
-  components: {
-
-  },
-  props:{},
+  name: "nav-footer",
+  components: {},
+  props: {},
   data() {
-   return {
-   
-     };
-   },
-  created() {
-     
-    },
-  mounted() {
-     
-    },
-  methods: {
-     
-    },
-  computed: {
-
+    return {};
   },
-  }
+  created() {},
+  mounted() {},
+  methods: {},
+  computed: {}
+};
 </script>
 <style>
-  
 </style>

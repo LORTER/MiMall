@@ -1,36 +1,21 @@
 <!--  -->
 <template>
-  <div class=''>
-      
-  </div>
+  <div class>index</div>
 </template>
 
 <script>
 export default {
-  name: '',
-  components: {
-
-  },
-  props:{},
+  name: "index",
+  components: {},
+  props: {},
   data() {
-   return {
-   
-     };
-   },
-  created() {
-     
-    },
-  mounted() {
-     
-    },
-  methods: {
-     
-    },
-  computed: {
-
+    return {};
   },
-  }
+  created() {},
+  mounted() {},
+  methods: {},
+  computed: {}
+};
 </script>
 <style>
-  
 </style>

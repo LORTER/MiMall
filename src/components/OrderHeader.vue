@@ -1,11 +1,11 @@
-<!-- order-list -->
+<!--  -->
 <template>
-  <div class>order-list</div>
+  <div class>order-header</div>
 </template>
 
 <script>
 export default {
-  name: "order-list",
+  name: "order-header",
   components: {},
   props: {},
   data() {
@@ -17,5 +17,5 @@ export default {
   computed: {}
 };
 </script>
-<style lang='scss' scoped>
+<style>
 </style>
