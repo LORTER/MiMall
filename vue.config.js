@@ -4,7 +4,7 @@ module.exports = {
         port:9090,
         proxy:{
             '/api':{
-                target:'https://www.easy-mock.com',
+                target:'http://mall-pre.springboot.cn',
                 changeOrigin:true,
                 pathRewrite:{
                     '/api':''
