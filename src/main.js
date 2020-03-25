@@ -3,6 +3,16 @@ import router from './router'
 import axios from 'axios'
 import VueAxios from 'vue-axios'
 import App from './App.vue'
+import animated from 'animate.css'
+import VueLazyload from 'vue-lazyload'
+ 
+Vue.use(VueLazyload,{
+  loading: '/imgs/loading-svg/loading-bars.svg'
+})
+
+
+Vue.use(animated)
+
 
 
 // 请求拦截，根据前端的跨域方式做调整

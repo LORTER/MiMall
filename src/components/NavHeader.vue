@@ -34,7 +34,7 @@
                   <a :href="'/#/product/'+item.id" target="_black">
                     <div class="pro-img">
                       <img
-                        :src="item.mainImage"
+                        v-lazy="item.mainImage"
                         alt
                       />
                     </div>
@@ -53,7 +53,7 @@
                   <a href target="_black">
                     <div class="pro-img">
                       <img
-                        src="https://cdn.cnbj0.fds.api.mi-img.com/b2c-mimall-media/df9b3e7a562e02a33eb069b3f0119815.png?thumb=1&w=160&h=110"
+                        v-lazy="'https://cdn.cnbj0.fds.api.mi-img.com/b2c-mimall-media/df9b3e7a562e02a33eb069b3f0119815.png?thumb=1&w=160&h=110'"
                         alt
                       />
                     </div>
@@ -65,7 +65,7 @@
                   <a href target="_black">
                     <div class="pro-img">
                       <img
-                        src="https://cdn.cnbj0.fds.api.mi-img.com/b2c-mimall-media/df9b3e7a562e02a33eb069b3f0119815.png?thumb=1&w=160&h=110"
+                        v-lazy="'https://cdn.cnbj0.fds.api.mi-img.com/b2c-mimall-media/df9b3e7a562e02a33eb069b3f0119815.png?thumb=1&w=160&h=110'"
                         alt
                       />
                     </div>
@@ -77,7 +77,7 @@
                   <a href target="_black">
                     <div class="pro-img">
                       <img
-                        src="https://cdn.cnbj0.fds.api.mi-img.com/b2c-mimall-media/df9b3e7a562e02a33eb069b3f0119815.png?thumb=1&w=160&h=110"
+                        v-lazy="'https://cdn.cnbj0.fds.api.mi-img.com/b2c-mimall-media/df9b3e7a562e02a33eb069b3f0119815.png?thumb=1&w=160&h=110'"
                         alt
                       />
                     </div>
@@ -89,7 +89,7 @@
                   <a href target="_black">
                     <div class="pro-img">
                       <img
-                        src="https://cdn.cnbj0.fds.api.mi-img.com/b2c-mimall-media/df9b3e7a562e02a33eb069b3f0119815.png?thumb=1&w=160&h=110"
+                        v-lazy="'https://cdn.cnbj0.fds.api.mi-img.com/b2c-mimall-media/df9b3e7a562e02a33eb069b3f0119815.png?thumb=1&w=160&h=110'"
                         alt
                       />
                     </div>
@@ -101,7 +101,7 @@
                   <a href target="_black">
                     <div class="pro-img">
                       <img
-                        src="https://cdn.cnbj0.fds.api.mi-img.com/b2c-mimall-media/df9b3e7a562e02a33eb069b3f0119815.png?thumb=1&w=160&h=110"
+                        v-lazy="'https://cdn.cnbj0.fds.api.mi-img.com/b2c-mimall-media/df9b3e7a562e02a33eb069b3f0119815.png?thumb=1&w=160&h=110'"
                         alt
                       />
                     </div>
@@ -113,7 +113,7 @@
                   <a href target="_black">
                     <div class="pro-img">
                       <img
-                        src="https://cdn.cnbj0.fds.api.mi-img.com/b2c-mimall-media/df9b3e7a562e02a33eb069b3f0119815.png?thumb=1&w=160&h=110"
+                        v-lazy="'https://cdn.cnbj0.fds.api.mi-img.com/b2c-mimall-media/df9b3e7a562e02a33eb069b3f0119815.png?thumb=1&w=160&h=110'"
                         alt
                       />
                     </div>
@@ -125,7 +125,7 @@
                   <a href target="_black">
                     <div class="pro-img">
                       <img
-                        src="https://cdn.cnbj0.fds.api.mi-img.com/b2c-mimall-media/df9b3e7a562e02a33eb069b3f0119815.png?thumb=1&w=160&h=110"
+                        v-lazy="'https://cdn.cnbj0.fds.api.mi-img.com/b2c-mimall-media/df9b3e7a562e02a33eb069b3f0119815.png?thumb=1&w=160&h=110'"
                         alt
                       />
                     </div>
@@ -144,7 +144,7 @@
                   <a href target="_black">
                     <div class="pro-img">
                       <img
-                        src="//cdn.cnbj1.fds.api.mi-img.com/mi-mall/6917267948c54c647d2009a98637aac6.jpg?thumb=1&w=160&h=110&f=webp&q=90"
+                        v-lazy="'//cdn.cnbj1.fds.api.mi-img.com/mi-mall/6917267948c54c647d2009a98637aac6.jpg?thumb=1&w=160&h=110&f=webp&q=90'"
                         alt
                       />
                     </div>
@@ -156,7 +156,7 @@
                   <a href target="_black">
                     <div class="pro-img">
                       <img
-                        src="//cdn.cnbj1.fds.api.mi-img.com/mi-mall/6917267948c54c647d2009a98637aac6.jpg?thumb=1&w=160&h=110&f=webp&q=90"
+                        v-lazy="'//cdn.cnbj1.fds.api.mi-img.com/mi-mall/6917267948c54c647d2009a98637aac6.jpg?thumb=1&w=160&h=110&f=webp&q=90'"
                         alt
                       />
                     </div>
@@ -168,7 +168,7 @@
                   <a href target="_black">
                     <div class="pro-img">
                       <img
-                        src="//cdn.cnbj1.fds.api.mi-img.com/mi-mall/6917267948c54c647d2009a98637aac6.jpg?thumb=1&w=160&h=110&f=webp&q=90"
+                        v-lazy="'//cdn.cnbj1.fds.api.mi-img.com/mi-mall/6917267948c54c647d2009a98637aac6.jpg?thumb=1&w=160&h=110&f=webp&q=90'"
                         alt
                       />
                     </div>
@@ -180,7 +180,7 @@
                   <a href target="_black">
                     <div class="pro-img">
                       <img
-                        src="//cdn.cnbj1.fds.api.mi-img.com/mi-mall/6917267948c54c647d2009a98637aac6.jpg?thumb=1&w=160&h=110&f=webp&q=90"
+                        v-lazy="'//cdn.cnbj1.fds.api.mi-img.com/mi-mall/6917267948c54c647d2009a98637aac6.jpg?thumb=1&w=160&h=110&f=webp&q=90'"
                         alt
                       />
                     </div>
@@ -192,7 +192,7 @@
                   <a href target="_black">
                     <div class="pro-img">
                       <img
-                        src="//cdn.cnbj1.fds.api.mi-img.com/mi-mall/6917267948c54c647d2009a98637aac6.jpg?thumb=1&w=160&h=110&f=webp&q=90"
+                        v-lazy="'//cdn.cnbj1.fds.api.mi-img.com/mi-mall/6917267948c54c647d2009a98637aac6.jpg?thumb=1&w=160&h=110&f=webp&q=90'"
                         alt
                       />
                     </div>
@@ -204,7 +204,7 @@
                   <a href target="_black">
                     <div class="pro-img">
                       <img
-                        src="//cdn.cnbj1.fds.api.mi-img.com/mi-mall/6917267948c54c647d2009a98637aac6.jpg?thumb=1&w=160&h=110&f=webp&q=90"
+                        v-lazy="'//cdn.cnbj1.fds.api.mi-img.com/mi-mall/6917267948c54c647d2009a98637aac6.jpg?thumb=1&w=160&h=110&f=webp&q=90'"
                         alt
                       />
                     </div>
@@ -216,7 +216,7 @@
                   <a href target="_black">
                     <div class="pro-img">
                       <img
-                        src="//cdn.cnbj1.fds.api.mi-img.com/mi-mall/6917267948c54c647d2009a98637aac6.jpg?thumb=1&w=160&h=110&f=webp&q=90"
+                        v-lazy="'//cdn.cnbj1.fds.api.mi-img.com/mi-mall/6917267948c54c647d2009a98637aac6.jpg?thumb=1&w=160&h=110&f=webp&q=90'"
                         alt
                       />
                     </div>
