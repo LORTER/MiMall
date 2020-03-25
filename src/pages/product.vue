@@ -1,12 +1,22 @@
 <!--  -->
 <template>
-  <div class>product</div>
+  <div class>
+    <product-param>
+      <template v-slot:buy>
+        <button class="btn">立即购买</button>
+      </template>
+    </product-param>
+  </div>
 </template>
 
 <script>
+import ProductParam from '../components/ProductParam'
+
 export default {
   name: "product",
-  components: {},
+  components: {
+    ProductParam
+  },
   props: {},
   data() {
     return {};
@@ -17,5 +27,6 @@ export default {
   computed: {}
 };
 </script>
-<style>
+<style lang="scss" scoped>
+
 </style>

@@ -11,11 +11,22 @@ export default {
   components: {
   },
   mounted(){
-    console.log(1)
-    // storage.setItem('a',3)
-    // storage.setItem('user',{a:1})
-    // storage.setItem('abc',{a:2},'user')
-    storage.clear('a','user')
+    // storage.clear('a','user')
+    this.getUser();
+    this.getCartCount();
+  },
+  methods:{
+    getUser(){
+      this.axios.get('/user').then((res)=>{
+        // to-do 保存到vuex里面
+        this.$store.dispatch('saveUserName',res.username);
+      })
+    },
+    getCartCount(){
+      this.axios.get('/carts/products/sum').then((res)=>{
+         this.$store.dispatch('saveCartCount',res);
+      })
+    }
   }
 }
 </script>

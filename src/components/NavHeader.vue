@@ -10,12 +10,12 @@
           <a href="javascript:;">协议规则</a>
         </div>
         <div class="topbar-user">
-          <a href="javascript:;" v-if="userName">{{userName}}</a>
+          <a href="javascript:;" v-if="userName" @click="$router.push('/login')">{{userName}}</a>
           <a href="javascript:;" v-if="!userName" @click="login">登录</a>
           <a href="javascript:;" v-if="userName">我的订单</a>
           <a href="javascript:;" v-if="!userName">注册</a>
           <a href="javascript:;" class="my-cart" @click="gotoCart">
-            <span class="icon-cart"></span> 购物车
+            <span class="icon-cart"></span> 购物车({{cartCount}})
           </a>
         </div>
       </div>
@@ -246,7 +246,6 @@ export default {
   props: {},
   data() {
     return {
-      userName:'jack',
       phoneList:[]
     };
   },
@@ -272,7 +271,14 @@ export default {
       this.$router.push('/cart');
     }
   },
-  computed: {}
+  computed: {
+    userName(){
+      return this.$store.state.username;
+    },
+    cartCount(){
+      return this.$store.state.cartCount;
+    }
+  }
 };
 </script>
 <style lang="scss" scope>
@@ -300,6 +306,7 @@ export default {
         display: inline-flex;
         align-items: center;
         justify-content: center;
+        margin-right: 0;
         .icon-cart {
           display: inline-block;
           width: 16px;

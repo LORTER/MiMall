@@ -10,6 +10,7 @@ import OrderConfirm from './pages/orderConfirm.vue'
 import OrderList from './pages/orderList.vue'
 import OrderPay from './pages/orderPay.vue'
 import AliPay from './pages/alipay.vue'
+import Login from './pages/login.vue'
 
 
 Vue.use(Router);
@@ -20,7 +21,7 @@ export default new Router({
             path: '/',
             name: 'home',
             component: Home,
-            redirect:'/index',
+            redirect:'/login',
             children: [
                 {
                     path: 'index',
@@ -70,6 +71,11 @@ export default new Router({
                     component: AliPay,
                 }
             ]
+        },
+        {
+            path: '/login',
+            name: 'login',
+            component: Login,
         }
 
     ]
