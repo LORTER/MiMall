@@ -238,18 +238,21 @@ export default {
         });
     },
     addCart(id) {
-      this.showModal = true;
-      return;
       this.axios
         .post("/carts", {
           productId: id,
           selected: true
         })
-        .then(res => {})
-        .catch(err => {});
+        .then((res) => {
+          this.$store.dispatch("saveCartCount", res.cartTotalQuantity);
+          this.showModal = true;
+        })
+        .catch(err => {
+          this.showModal = true;
+        });
     },
-    gotoCart(){
-      this.$router.push('/cart');
+    gotoCart() {
+      this.$router.push("/cart");
     }
   },
   computed: {}

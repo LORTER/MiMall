@@ -15,7 +15,8 @@
           <a href="javascript:;" v-if="userName">我的订单</a>
           <a href="javascript:;" v-if="!userName">注册</a>
           <a href="javascript:;" class="my-cart" @click="gotoCart">
-            <span class="icon-cart"></span> 购物车({{cartCount}})
+            <span class="icon-cart"></span>
+            购物车({{cartCount}})
           </a>
         </div>
       </div>
@@ -33,10 +34,7 @@
                 <li class="product" v-for="item in phoneList" :key="item.id">
                   <a :href="'/#/product/'+item.id" target="_black">
                     <div class="pro-img">
-                      <img
-                        v-lazy="item.mainImage"
-                        alt
-                      />
+                      <img v-lazy="item.mainImage" alt />
                     </div>
                     <div class="pro-name">{{item.name}}</div>
                     <div class="pro-price">￥{{item.price}}元</div>
@@ -246,7 +244,7 @@ export default {
   props: {},
   data() {
     return {
-      phoneList:[]
+      phoneList: []
     };
   },
   created() {},
@@ -254,28 +252,30 @@ export default {
     this.getProductList();
   },
   methods: {
-    login(){
-      this.$router.push('/login');
+    login() {
+      this.$router.push("/login");
     },
-    getProductList(){
-      this.axios.get('/products',{
-        params:{
-          categoryId:'100012',
-          pageSize:6
-        }
-      }).then((res)=>{
-        this.phoneList=res.list;
-      })
+    getProductList() {
+      this.axios
+        .get("/products", {
+          params: {
+            categoryId: "100012",
+            pageSize: 6
+          }
+        })
+        .then(res => {
+          this.phoneList = res.list;
+        });
     },
-    gotoCart(){
-      this.$router.push('/cart');
+    gotoCart() {
+      this.$router.push("/cart");
     }
   },
   computed: {
-    userName(){
+    userName() {
       return this.$store.state.username;
     },
-    cartCount(){
+    cartCount() {
       return this.$store.state.cartCount;
     }
   }
@@ -286,6 +286,7 @@ export default {
 @import "../assets/scss/mixin.scss";
 @import "../assets/scss/config.scss";
 .header {
+  border-bottom: 1px solid #e5e5e5;
   .nav-topbar {
     height: 39px;
     line-height: 39px;
@@ -365,11 +366,14 @@ export default {
           &:hover {
             color: $colorA;
             .children {
+              // display: block;
+              border-top: 1px solid #e5e5e5;
               height: 220px;
               opacity: 1;
             }
           }
           .children {
+            // display: none;
             position: absolute;
             top: 112px;
             left: 0;
@@ -377,11 +381,11 @@ export default {
             height: 0;
             opacity: 0;
             overflow: hidden;
-            border-top: 1px solid #e5e5e5;
             box-shadow: 0 7px 6px -1px rgba(0, 0, 0, 0.11);
             z-index: 10;
-            background-color:#fff;
+            background-color: #fff;
             transition: all 0.5s;
+            transition-property: opacity , height;
             ul {
               display: flex;
               .product {

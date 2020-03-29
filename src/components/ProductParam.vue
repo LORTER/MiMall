@@ -1,7 +1,7 @@
 <template>
   <div class="nav-bar" :class="{'is_fixed':isFixed}">
     <div class="container">
-      <div class="pro-title">小米8</div>
+      <div class="pro-title">{{title}}</div>
       <div class="pro-param">
         <a href>概述</a>
         <span>|</span>
@@ -17,6 +17,11 @@
 <script>
 export default {
   name: "product-param",
+  props:{
+    title:{
+      type:String
+    }
+  },
   data() {
     return {
       isFixed: false
@@ -48,6 +53,7 @@ export default {
   border-top: 1px solid $colorH;
   background: $colorG;
   transition: all 0.3s;
+  z-index:10;
 
   .container {
     @include flex();
